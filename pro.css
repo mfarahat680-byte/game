@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #07152f;
+    color: white;
+    line-height: 1.8;
+}
+
+header {
+    background: #0756b5;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #ffdf00;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffdf00;
+}
+
+.hero {
+    min-height: 420px;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at top, #168dff, transparent 55%),
+        linear-gradient(135deg, #073c91, #07152f);
+}
+
+.hero-content h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    color: #ffdf00;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffdf00;
+    color: #07152f;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.games,
+.characters,
+.about {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    color: #ffdf00;
+    margin-bottom: 30px;
+}
+
+.cards,
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card,
+.character {
+    background: #10284c;
+    border: 1px solid #1d5b9d;
+    border-radius: 18px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover,
+.character:hover {
+    transform: translateY(-8px);
+    border-color: #ffdf00;
+    box-shadow: 0 10px 25px #0005;
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3,
+.character h3 {
+    color: #ffdf00;
+    font-size: 22px;
+    margin: 15px 10px 5px;
+}
+
+.card p,
+.character p {
+    padding: 0 12px;
+}
+
+.emoji {
+    font-size: 65px;
+    margin-top: 20px;
+}
+
+.about {
+    background: #0b2041;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+footer {
+    background: #041027;
+    text-align: center;
+    padding: 25px;
+    color: #b9d5ff;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .games,
+    .characters,
+    .about {
+        padding: 40px 5%;
+    }
+}
